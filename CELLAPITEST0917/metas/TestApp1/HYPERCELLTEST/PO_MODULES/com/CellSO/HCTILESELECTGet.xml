@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns13:serviceObject xmlns:ns2="http://www.tmax.co.kr/proobject/message" xmlns:ns3="http://www.tmax.co.kr/proobject/testcase" xmlns:ns4="http://www.tmax.co.kr/proobject/dto" xmlns:ns5="http://www.tmax.co.kr/proobject/resource" xmlns:ns6="http://www.tmax.co.kr/proobject/dto/validator" xmlns:ns7="http://www.tmax.co.kr/proobject/serviceobject-automatic" xmlns:ns8="http://www.tmax.co.kr/proobject/sourcecode" xmlns:ns9="http://www.tmax.co.kr/proobject/flow" xmlns:ns10="http://www.tmax.co.kr/proobject/dataobjectfactory" xmlns:ns11="http://www.tmax.co.kr/proobject/queryobject" xmlns:ns12="http://www.tmax.co.kr/proobject/bizobject" xmlns:ns13="http://www.tmax.co.kr/proobject/serviceobject" xmlns:ns14="http://www.tmax.co.kr/proobject/dataobject" xmlns:ns15="http://www.tmax.co.kr/proobject/taskobject" xmlns:ns16="http://www.tmax.co.kr/proobject/jobobject" xmlns:ns17="http://www.tmax.co.kr/proobject/servicegroup" xmlns:ns18="http://www.tmax.co.kr/proobject/aspectj" xmlns:ns19="http://www.tmax.co.kr/proobject/mapping" xmlns:ns20="http://www.tmax.co.kr/proobject/application/runtime" xmlns:ns21="http://www.tmaxsoft.co.kr/proobject/testsuite" xmlns:ns22="http://www.example.org/externalObjectConfig" xmlns:ns23="http://www.tmax.co.kr/proobject/restriction_codes" xmlns:ns24="http://www.tmax.co.kr/proobject/application" xmlns:ns25="http://www.tmax.co.kr/proobject/contents" xmlns:ns26="http://www.example.org/testData" xmlns:ns27="http://www.tmaxsoft.co.kr/proobject/testresult" xmlns:ns28="http://www.tmax.co.kr/proobject/siteConfig" xmlns:ns29="http://www.tmax.co.kr/proobject/serverConfig" xmlns:ns30="http://www.tmaxsoft.co.kr/proobject/testOperation" xmlns:ns31="http://www.tmax.co.kr/proobject/probuilder_config" xmlns:ns32="http://www.tmax.co.kr/proobject/property" xmlns:ns33="http://www.tmax.co.kr/proobject/serviceGroup" identifier="general" name="HCTILESELECTGet" resourceId="00002b4e8bac0022e8fcb100a2832029" logicalName="HCTILESELECTGet" physicalName="HCTILESELECTGet" resourceType="SERVICE_OBJECT" resourcePackage="com.CellSO" creator="admin" revision="1" description="" resourcePath="com/CellSO" modifier="admin" created="2020-11-26 14:26:38" lastUpdated="2020-11-26 14:26:38">
+    <ns13:inputDo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns14:dataObjectType" resourceId="urn:proobject:com.CellSO:HCTILESELECTGet" physicalName="HCGETDO" resourceType="DATA_OBJECT" serviceGroupName="CELLAPITEST0917" resourcePackage="com.CellDO" revision="0" resourcePath="com/CellDO"/>
+    <ns13:outputDo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns14:dataObjectType" resourceId="urn:proobject:com.CellSO:HCTILESELECTGet" physicalName="COLSELECTMULTIROWS" resourceType="DATA_OBJECT" serviceGroupName="CELLAPITEST0917" resourcePackage="com.CellDO" revision="0" resourcePath="com/CellDO"/>
+    <ns13:opCode/>
+    <ns13:member>
+        <ns13:variable kind="DTO" name="input" arrayKind="none" size="0" scope="member" initObject="" modifier="public" getter="false" setter="false" lazy="false" inject="NONE">
+            <ns9:do physicalName="HCGETDO" resourcePath="com/CellDO" inOutType="INPUT"/>
+        </ns13:variable>
+        <ns13:variable kind="DTO" name="output" arrayKind="none" size="0" scope="member" initObject="" modifier="public" getter="false" setter="false" lazy="false" inject="NONE">
+            <ns9:do physicalName="COLSELECTMULTIROWS" resourcePath="com/CellDO" inOutType="OUTPUT"/>
+        </ns13:variable>
+        <ns13:variable kind="OBJECT" name="var1" scope="member" modifier="public" getter="false" setter="false" lazy="false" inject="NONE">
+            <ns9:userDefined>com.CellBO.HCTILESELECT</ns9:userDefined>
+        </ns13:variable>
+    </ns13:member>
+    <ns13:wholeImport>
+        <ns13:importType>com.tmax.proobject.core.ServiceObject</ns13:importType>
+        <ns13:importType>com.tmax.proobject.model.business.BusinessObject</ns13:importType>
+        <ns13:importType>com.tmax.proobject.model.dataobject.DataObject</ns13:importType>
+        <ns13:importType>com.tmax.proobject.engine.servicemanager.*</ns13:importType>
+        <ns13:importType>com.tmax.proobject.logger.ProObjectLogger</ns13:importType>
+        <ns13:importType>com.tmax.proobject.logger.application.ServiceLogger</ns13:importType>
+        <ns13:importType>com.tmax.proobject.model.dto.*</ns13:importType>
+        <ns13:importType>com.tmax.proobject.core.DataSource</ns13:importType>
+        <ns13:importType>javax.inject.Inject</ns13:importType>
+        <ns13:importType>com.tmax.proobject.engine.waitobject.WaitObject</ns13:importType>
+        <ns13:importType>java.math.BigDecimal</ns13:importType>
+        <ns13:importType>java.util.List</ns13:importType>
+        <ns13:importType>java.util.ArrayList</ns13:importType>
+        <ns13:importType>java.util.logging.Level</ns13:importType>
+        <ns13:importType>java.io.File</ns13:importType>
+        <ns13:importType>com.tmax.proobject.model.transaction.TransactionType</ns13:importType>
+        <ns13:importType>com.tmax.proobject.service.RCallReturn</ns13:importType>
+        <ns13:importType>com.tmax.proobject.dataobject.util.DataDefinitionExecutor</ns13:importType>
+        <ns13:importType>com.CellDO.HCGETDO</ns13:importType>
+        <ns13:importType>com.CellDO.COLSELECTMULTIROWS</ns13:importType>
+        <ns13:importType>com.CellBO.HCTILESELECT</ns13:importType>
+    </ns13:wholeImport>
+    <ns13:serviceMethod methodName="service" displayName="service" modifier="public" comments="" overrided="true">
+        <ns9:flowModule>
+            <ns9:entryModule>
+                <ns9:name>service</ns9:name>
+                <ns9:nextEntries>
+                    <ns9:id>0</ns9:id>
+                    <ns9:id>1</ns9:id>
+                </ns9:nextEntries>
+            </ns9:entryModule>
+            <ns9:innerModules/>
+            <ns9:xorModules/>
+            <ns9:virtualModules>
+                <ns9:virtualModule nodeId="1">
+                    <ns9:name>버추얼 모듈</ns9:name>
+                    <ns9:nextEntries/>
+                    <ns9:code>		 return output;</ns9:code>
+                </ns9:virtualModule>
+            </ns9:virtualModules>
+            <ns9:loopModules/>
+            <ns9:bizMethodCalls>
+                <ns9:bizMethodCall nodeId="0">
+                    <ns9:nextEntries/>
+                    <ns9:bizInstanceInfo scope="member" variableName="var1" lazy="false">
+                        <ns9:classInfo classPackageName="com.CellBO" className="HCTILESELECT"/>
+                    </ns9:bizInstanceInfo>
+                    <ns9:method methodName="Mathod2">
+                        <ns12:arguments>
+                            <ns9:argument>
+<ns9:variable kind="DTO" name="arg0">
+    <ns9:do physicalName="HCGETDO" resourcePath="com/CellDO"/>
+</ns9:variable>
+<ns9:sequence>0</ns9:sequence>
+                            </ns9:argument>
+                        </ns12:arguments>
+                        <ns12:returnType kind="DTO">
+                            <ns9:do physicalName="COLSELECTMULTIROWS" resourcePath="com/CellDO"/>
+                        </ns12:returnType>
+                    </ns9:method>
+                    <ns9:in>
+                        <ns9:transformation/>
+                        <ns9:byPass>
+                            <ns9:memberVariable name="arg0" order="0"/>
+                        </ns9:byPass>
+                    </ns9:in>
+                    <ns9:out>
+                        <ns9:transformation/>
+                        <ns9:byPass>
+                            <ns9:memberVariable name="output" order="0"/>
+                        </ns9:byPass>
+                    </ns9:out>
+                    <ns9:preAssign/>
+                    <ns9:postAssign/>
+                </ns9:bizMethodCall>
+            </ns9:bizMethodCalls>
+            <ns9:serviceCalls/>
+            <ns9:assignModules/>
+            <ns9:deferredModules/>
+            <ns9:dataObjectCalls/>
+            <ns9:replyCalls/>
+        </ns9:flowModule>
+        <ns13:arguments>
+            <ns9:argument>
+                <ns9:variable kind="DTO" name="arg0">
+                    <ns9:do physicalName="HCGETDO" resourcePath="com/CellDO"/>
+                </ns9:variable>
+                <ns9:sequence>0</ns9:sequence>
+            </ns9:argument>
+        </ns13:arguments>
+        <ns13:returnType kind="DTO">
+            <ns9:do physicalName="COLSELECTMULTIROWS" resourcePath="com/CellDO"/>
+        </ns13:returnType>
+        <ns13:classInfo classPackageName="com/CellSO" className="HCTILESELECTGet"/>
+        <ns13:exceptions>
+            <ns13:exception>java.lang.Throwable</ns13:exception>
+        </ns13:exceptions>
+        <ns13:annotations>
+            <ns13:annotation>Override</ns13:annotation>
+        </ns13:annotations>
+    </ns13:serviceMethod>
+    <ns13:interfaces/>
+</ns13:serviceObject>

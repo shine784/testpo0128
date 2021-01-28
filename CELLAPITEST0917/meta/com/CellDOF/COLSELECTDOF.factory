@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns10:dataObjectfactory xmlns:ns2="http://www.tmax.co.kr/proobject/message" xmlns:ns3="http://www.tmax.co.kr/proobject/testcase" xmlns:ns4="http://www.tmax.co.kr/proobject/dto" xmlns:ns5="http://www.tmax.co.kr/proobject/resource" xmlns:ns6="http://www.tmax.co.kr/proobject/dto/validator" xmlns:ns7="http://www.tmax.co.kr/proobject/serviceobject-automatic" xmlns:ns8="http://www.tmax.co.kr/proobject/sourcecode" xmlns:ns9="http://www.tmax.co.kr/proobject/flow" xmlns:ns10="http://www.tmax.co.kr/proobject/dataobjectfactory" xmlns:ns11="http://www.tmax.co.kr/proobject/queryobject" xmlns:ns12="http://www.tmax.co.kr/proobject/bizobject" xmlns:ns13="http://www.tmax.co.kr/proobject/serviceobject" xmlns:ns14="http://www.tmax.co.kr/proobject/dataobject" xmlns:ns15="http://www.tmax.co.kr/proobject/taskobject" xmlns:ns16="http://www.tmax.co.kr/proobject/jobobject" xmlns:ns17="http://www.tmax.co.kr/proobject/servicegroup" xmlns:ns18="http://www.tmax.co.kr/proobject/aspectj" xmlns:ns19="http://www.tmax.co.kr/proobject/mapping" xmlns:ns20="http://www.tmax.co.kr/proobject/application/runtime" xmlns:ns21="http://www.tmaxsoft.co.kr/proobject/testsuite" xmlns:ns22="http://www.tmax.co.kr/proobject/restriction_codes" xmlns:ns23="http://www.example.org/externalObjectConfig" xmlns:ns24="http://www.tmax.co.kr/proobject/application" xmlns:ns25="http://www.tmax.co.kr/proobject/contents" xmlns:ns26="http://www.example.org/testData" xmlns:ns27="http://www.tmaxsoft.co.kr/proobject/testresult" xmlns:ns28="http://www.tmax.co.kr/proobject/siteConfig" xmlns:ns29="http://www.tmax.co.kr/proobject/serverConfig" xmlns:ns30="http://www.tmaxsoft.co.kr/proobject/testOperation" xmlns:ns31="http://www.tmax.co.kr/proobject/probuilder_config" xmlns:ns32="http://www.tmax.co.kr/proobject/property" xmlns:ns33="http://www.tmax.co.kr/proobject/serviceGroup" factoryType="DBIO" resourceId="00003e82b1cb00bbaf753f0038a9491f" logicalName="COLSELECTDOF" physicalName="COLSELECTDOF" resourceType="DATA_OBJECT_FACTORY" resourcePackage="com.CellDOF" creator="admin" owner="admin" revision="21" resourcePath="com/CellDOF" modifier="admin" created="2020-09-18 11:21:18" lastUpdated="2020-09-25 13:44:35">
+    <ns10:dataObject physicalName="COLSELECTDO" logicalName="COLSELECTDO" resourcePath="com/CellDO">
+        <ns10:objectFields physicalName="cellkey" array="" schema="" tableName="" columnName="" javaType="Integer" length="20" nullable="true" keyColumn="false"/>
+        <ns10:objectFields physicalName="stringdata" array="" schema="" tableName="" columnName="" javaType="String" length="255" nullable="true" keyColumn="false"/>
+        <ns10:objectFields physicalName="doubledata" array="" schema="" tableName="" columnName="" javaType="Integer" length="10" nullable="true" keyColumn="false"/>
+        <ns10:objectFields physicalName="formula" array="" schema="" tableName="" columnName="" javaType="String" length="30" nullable="true" keyColumn="false"/>
+        <ns10:objectFields physicalName="style" array="" schema="" tableName="" columnName="" javaType="String" length="255" nullable="true" keyColumn="false"/>
+        <ns10:objectFields physicalName="chain" array="" schema="" tableName="" columnName="" javaType="String" length="255" nullable="true" keyColumn="false"/>
+        <ns10:objectFields physicalName="datatype" array="" schema="" tableName="" columnName="" javaType="String" length="10" nullable="true" keyColumn="false"/>
+        <ns10:objectFields physicalName="ypos" array="" schema="" tableName="" columnName="" javaType="Integer" length="10" nullable="true" keyColumn="false"/>
+    </ns10:dataObject>
+    <ns10:dbioAttribute stringTrim="false">
+        <ns10:datasource>tibero6_dev</ns10:datasource>
+        <ns10:tables name="TESTCELLINFO"/>
+        <ns10:fullstatements sqlType="SELECT" alias="select_default_0" default="false">
+            <ns10:statement>/* com.CellDOF.COLSELECTDOF */
+SELECT     A.CELLKEY,
+    A.STRINGDATA,
+    A.DOUBLEDATA,
+    A.FORMULA,
+    A.STYLE,
+    A.CHAIN,
+    A.DATATYPE
+FROM
+    TESTCELLINFO    A
+WHERE
+        A.CELLKEY = :cellkey
+    AND A.STRINGDATA = :stringdata
+    AND A.DOUBLEDATA = :doubledata
+    AND A.FORMULA = :formula
+    AND A.STYLE = :style
+    AND A.CHAIN = :chain
+    AND A.DATATYPE = :datatype
+</ns10:statement>
+            <ns10:parameter physicalName="cellkey" javaType="Integer" parameter="true"/>
+            <ns10:parameter physicalName="stringdata" javaType="String" parameter="true"/>
+            <ns10:parameter physicalName="doubledata" javaType="Integer" parameter="true"/>
+            <ns10:parameter physicalName="formula" javaType="String" parameter="true"/>
+            <ns10:parameter physicalName="style" javaType="String" parameter="true"/>
+            <ns10:parameter physicalName="chain" javaType="String" parameter="true"/>
+            <ns10:parameter physicalName="datatype" javaType="String" parameter="true"/>
+        </ns10:fullstatements>
+        <ns10:fullstatements sqlType="UPDATE" alias="update_default_0" default="false">
+            <ns10:statement>/* com.CellDOF.COLSELECTDOF */
+UPDATE     TESTCELLINFO
+SET
+    CELLKEY = :cellkey,
+    STRINGDATA = :stringdata,
+    DOUBLEDATA = :doubledata,
+    FORMULA = :formula,
+    STYLE = :style,
+    CHAIN = :chain,
+    DATATYPE = :datatype
+WHERE
+    A.CELLKEY = :cellkey
+    AND A.STRINGDATA = :stringdata
+    AND A.DOUBLEDATA = :doubledata
+    AND A.FORMULA = :formula
+    AND A.STYLE = :style
+    AND A.CHAIN = :chain
+    AND A.DATATYPE = :datatype
+</ns10:statement>
+            <ns10:parameter physicalName="cellkey" javaType="Integer" updatable="true"/>
+            <ns10:parameter physicalName="stringdata" javaType="String" updatable="true"/>
+            <ns10:parameter physicalName="doubledata" javaType="Integer" updatable="true"/>
+            <ns10:parameter physicalName="formula" javaType="String" updatable="true"/>
+            <ns10:parameter physicalName="style" javaType="String" updatable="true"/>
+            <ns10:parameter physicalName="chain" javaType="String" updatable="true"/>
+            <ns10:parameter physicalName="datatype" javaType="String" updatable="true"/>
+            <ns10:parameter physicalName="cellkey" javaType="Integer" parameter="true"/>
+            <ns10:parameter physicalName="stringdata" javaType="String" parameter="true"/>
+            <ns10:parameter physicalName="doubledata" javaType="Integer" parameter="true"/>
+            <ns10:parameter physicalName="formula" javaType="String" parameter="true"/>
+            <ns10:parameter physicalName="style" javaType="String" parameter="true"/>
+            <ns10:parameter physicalName="chain" javaType="String" parameter="true"/>
+            <ns10:parameter physicalName="datatype" javaType="String" parameter="true"/>
+        </ns10:fullstatements>
+        <ns10:fullstatements sqlType="INSERT" alias="insert_default_0" default="false">
+            <ns10:statement>/* com.CellDOF.COLSELECTDOF */
+INSERT INTO TESTCELLINFO (
+    CELLKEY,
+    STRINGDATA,
+    DOUBLEDATA,
+    FORMULA,
+    STYLE,
+    CHAIN,
+    DATATYPE
+) VALUES (
+    :cellkey,
+    :stringdata,
+    :doubledata,
+    :formula,
+    :style,
+    :chain,
+    :datatype
+)</ns10:statement>
+            <ns10:parameter physicalName="cellkey" javaType="Integer" updatable="true"/>
+            <ns10:parameter physicalName="stringdata" javaType="String" updatable="true"/>
+            <ns10:parameter physicalName="doubledata" javaType="Integer" updatable="true"/>
+            <ns10:parameter physicalName="formula" javaType="String" updatable="true"/>
+            <ns10:parameter physicalName="style" javaType="String" updatable="true"/>
+            <ns10:parameter physicalName="chain" javaType="String" updatable="true"/>
+            <ns10:parameter physicalName="datatype" javaType="String" updatable="true"/>
+        </ns10:fullstatements>
+        <ns10:fullstatements sqlType="DELETE" alias="delete_default_0" default="false">
+            <ns10:statement>/* com.CellDOF.COLSELECTDOF */
+DELETE FROM TESTCELLINFO
+WHERE
+    A.CELLKEY = :cellkey
+    AND A.STRINGDATA = :stringdata
+    AND A.DOUBLEDATA = :doubledata
+    AND A.FORMULA = :formula
+    AND A.STYLE = :style
+    AND A.CHAIN = :chain
+    AND A.DATATYPE = :datatype
+</ns10:statement>
+            <ns10:parameter physicalName="cellkey" javaType="Integer" parameter="true"/>
+            <ns10:parameter physicalName="stringdata" javaType="String" parameter="true"/>
+            <ns10:parameter physicalName="doubledata" javaType="Integer" parameter="true"/>
+            <ns10:parameter physicalName="formula" javaType="String" parameter="true"/>
+            <ns10:parameter physicalName="style" javaType="String" parameter="true"/>
+            <ns10:parameter physicalName="chain" javaType="String" parameter="true"/>
+            <ns10:parameter physicalName="datatype" javaType="String" parameter="true"/>
+        </ns10:fullstatements>
+        <ns10:dynamicstatements sqlType="SELECT" alias="goodquery" default="false">
+            <ns10:statement>SELECT I.cellkey, I.doubledata, I.stringdata, I.formula, I.style, I.chain, I.datatype    
+FROM testcellinfo I   
+JOIN testcells T  ON (I.CELLKEY=T.CELLKEY)   
+JOIN verticalmap V  ON (
+:fromh = V.YNAME or
+T.C4=V.YNAME or
+T.C5=V.YNAME 
+)  and ( V.YPOS between :fromv and :tov);</ns10:statement>
+            <ns10:parameter physicalName="fromh" javaType="String" parameter="true"/>
+            <ns10:parameter physicalName="fromv" javaType="String" parameter="true"/>
+            <ns10:parameter physicalName="tov" javaType="String" parameter="true"/>
+        </ns10:dynamicstatements>
+    </ns10:dbioAttribute>
+</ns10:dataObjectfactory>
